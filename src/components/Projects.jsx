@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 const Projects = () => {
   const projects = [
     {
-      title: 'E-commerce Platform',
-      description: 'A full-stack e-commerce solution with payment integration',
-      tech: ['React', 'Node.js', 'Express', 'MongoDB'],
-      image: '/images/project1.jpg',
-      link: '#',
-      github: '#'
+      title: 'Vanilla Dashboard',
+      description: 'Basic Dasboard UI uisng HTML, CSS, and JavaScript',
+      tech: ['HTML', 'CSS', 'JavaScript'],
+      image: '../images/dashboad.png',
+      link: 'https://umar2104.github.io/Vanilla-Dashboard/',
+      github: 'https://github.com/umar2104/Vanilla-Dashboard.git'
     },
     {
       title: 'Social Media Dashboard',
