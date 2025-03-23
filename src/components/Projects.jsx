@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
+import dashboardImage from '../images/dashboard.png';
 const Projects = () => {
   const projects = [
     {
       title: 'Vanilla Dashboard',
       description: 'Basic Dasboard UI uisng HTML, CSS, and JavaScript',
       tech: ['HTML', 'CSS', 'JavaScript'],
-      image: '../images/dashboad.png',
+      image: dashboardImage,
       link: 'https://umar2104.github.io/Vanilla-Dashboard/',
       github: 'https://github.com/umar2104/Vanilla-Dashboard.git'
     },

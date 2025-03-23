@@ -49,24 +49,24 @@ const About = () => {
           <p>
             My journey in web development started in 2021, and since then, I've been 
             constantly learning and improving my skills. I specialize in modern JavaScript 
-            frameworks like React and Angular, and have experience with Node.js and Express 
+            frameworks like Angular and React, and have experience with Node.js and Express 
             for backend development.
           </p>
           
           <div className="personal-info">
             <div className="info-item">
               <span className="info-title">Name:</span>
-              <span className="info-value">Your Full Name</span>
+              <span className="info-value">Mohammad Umer Shaikh</span>
             </div>
             
             <div className="info-item">
               <span className="info-title">Email:</span>
-              <span className="info-value">your.email@example.com</span>
+              <span className="info-value">mumershaikh6882@gmail.com</span>
             </div>
             
             <div className="info-item">
               <span className="info-title">From:</span>
-              <span className="info-value">Your City, Country</span>
+              <span className="info-value">Mumbai, Maharshtra, India</span>
             </div>
             
             <div className="info-item">

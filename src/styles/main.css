@@ -1,6 +1,7 @@
 /* main.css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* Default (Light) Theme */
 :root {
     --primary-color: #6c63ff; /* Vibrant purple */
     --secondary-color: #f50057; /* Bright pink */
@@ -10,6 +11,18 @@
     --text-color: #2c3e50; /* Richer text color */
     --gray-color: #7f8c8d; /* Modern gray */
     --accent-color: #00d4ff; /* Cyan accent for flair */
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+    --primary-color: #8b83ff; /* Lighter purple for dark mode */
+    --secondary-color: #ff3366; /* Adjusted pink */
+    --dark-color: #e0e6f0; /* Light gray for text */
+    --light-color: #1a1a2e; /* Dark background */
+    --background-color: #2c3e50; /* Darker background */
+    --text-color: #e0e6f0; /* Light text */
+    --gray-color: #b0b8c0; /* Lighter gray */
+    --accent-color: #00e6ff; /* Brighter cyan */
 }
 
 * {
@@ -28,6 +41,7 @@ body {
     color: var(--text-color);
     overflow-x: hidden;
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -68,6 +82,7 @@ section {
 }
 
 /* Navbar Styles */
+/* Navbar Styles */
 .navbar {
     position: fixed;
     top: 0;
@@ -78,14 +93,17 @@ section {
     align-items: center;
     padding: 1.5rem 5%;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.95);
-    transition: all 0.3s ease;
+    background: var(--light-color); /* Solid background by default */
+    transition: padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-theme="dark"] .navbar {
+    background: var(--light-color); /* Use dark mode background */
 }
 
 .navbar.scrolled {
-    background: var(--light-color);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
     padding: 1rem 5%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 .logo a {
@@ -133,6 +151,36 @@ section {
     width: 100%;
 }
 
+/* Theme Toggle Button */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    background: rgba(108, 99, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.theme-toggle-btn i {
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle-btn:hover i {
+    transform: rotate(20deg);
+}
+
 /* Hero Section Styles */
 .hero-section {
     position: relative;
@@ -178,6 +226,10 @@ section {
     background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.name {
+    color: var(--accent-color);
 }
 
 .cta-buttons {
@@ -232,6 +284,7 @@ section {
 /* About Section Styles */
 .about-section {
     background: var(--light-color);
+    transition: background-color 0.3s ease;
 }
 
 .about-container {
@@ -356,6 +409,7 @@ section {
 /* Skills Section Styles */
 .skills-section {
     background: linear-gradient(to bottom, var(--light-color), var(--background-color));
+    transition: background-color 0.3s ease;
 }
 
 .skills-container {
@@ -370,7 +424,7 @@ section {
     padding: 1.5rem;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .skill-item:hover {
@@ -399,6 +453,11 @@ section {
     background: #e0e6f0;
     border-radius: 6px;
     overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] .skill-bar {
+    background: #3a4e62; /* Darker bar in dark mode */
 }
 
 .skill-progress {
@@ -411,6 +470,7 @@ section {
 /* Projects Section Styles */
 .projects-section {
     background: var(--background-color);
+    transition: background-color 0.3s ease;
 }
 
 .projects-grid {
@@ -427,7 +487,7 @@ section {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
+    transition: all 0.3s ease, background-color 0.3s ease;
 }
 
 .project-card:hover {
@@ -519,6 +579,7 @@ section {
 /* Contact Section Styles */
 .contact-section {
     background: var(--light-color);
+    transition: background-color 0.3s ease;
 }
 
 .contact-container {
@@ -541,6 +602,7 @@ section {
     padding: 2.5rem;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease;
 }
 
 .contact-info h3 {
@@ -619,6 +681,7 @@ section {
     border-radius: 20px;
     padding: 2.5rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease;
 }
 
 .contact-form form {
@@ -636,7 +699,14 @@ section {
     font-size: 1rem;
     font-family: 'Poppins', sans-serif;
     transition: all 0.3s ease;
-    background: #fff;
+    background: var(--light-color);
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group textarea {
+    background: #3a4e62; /* Darker input background */
+    border-color: #4a6078;
+    color: var(--text-color);
 }
 
 .form-group input:focus,
@@ -696,13 +766,14 @@ section {
     color: #c0392b;
 }
 
-/* Footer (optional, if you add one) */
+/* Footer (optional) */
 .footer {
     background: var(--dark-color);
     color: var(--light-color);
     text-align: center;
     padding: 2rem 0;
     margin-top: 50px;
+    transition: background-color 0.3s ease;
 }
 
 .footer p {
@@ -738,6 +809,10 @@ section {
     .nav-links {
         flex-direction: column;
         gap: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .theme-toggle {
         margin-top: 1rem;
     }
 
