@@ -94,7 +94,7 @@ const Contact = () => {
               </div>
               <div className="text">
                 <h4>Location</h4>
-                <p>Your City, Country</p>
+                <p>Mumbai, Maharshtra, India</p>
               </div>
             </div>
             
@@ -104,7 +104,7 @@ const Contact = () => {
               </div>
               <div className="text">
                 <h4>Email</h4>
-                <p>your.email@example.com</p>
+                <p>mumershaikg7468@gmail.com</p>
               </div>
             </div>
             
@@ -114,21 +114,21 @@ const Contact = () => {
               </div>
               <div className="text">
                 <h4>Phone</h4>
-                <p>+1 234 567 890</p>
+                <p>+91 8691947468 / +91 8850706882</p>
               </div>
             </div>
           </div>
           
           <div className="social-links">
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/umar2104" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-github"></i>
             </a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+            <a href="https://linkedin.com/in/mohammad-umer-shaikh-0198791a6" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-linkedin"></i>
             </a>
-            <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
+            {/* <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-twitter"></i>
-            </a>
+            </a> */}
           </div>
         </motion.div>
         

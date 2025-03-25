@@ -3,12 +3,17 @@ import { motion } from 'framer-motion';
 
 const Skills = () => {
   const skills = [
-    { name: 'React', level: 90 },
-    { name: 'Angular', level: 85 },
-    { name: 'Node.js', level: 80 },
-    { name: 'Express', level: 75 },
-    { name: 'MongoDB', level: 70 },
-    { name: 'MySQL', level: 75 },
+    { name: 'Angular', level: 90 },
+    { name: 'HTML5', level: 95 },
+    { name: 'CSS3', level: 95 },
+    { name: 'SCSS', level: 75 },
+    { name: 'Javascript', level: 85 },
+    { name: 'Typescript', level: 90 },
+    { name: 'React', level: 55 },
+    { name: 'Node.js', level: 65 },
+    { name: 'Express', level: 55 },
+    { name: 'MongoDB', level: 55 },
+    { name: 'MySQL', level: 60 },
     { name: 'Java', level: 65 },
   ];
 
@@ -49,6 +54,7 @@ const Skills = () => {
           </motion.div>
         ))}
       </div>
+
     </section>
   );
 };
